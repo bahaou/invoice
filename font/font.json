@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2021-12-31 11:01:24.093620",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "type",
+  "language",
+  "googlelinks",
+  "is_url",
+  "file",
+  "file_link",
+  "css",
+  "preview_section",
+  "preview_text",
+  "font_size",
+  "demo",
+  "symbols"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Google Fonts\nOtf file\nCss"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Otf file\" && doc.is_url==0;",
+   "description": "Save the font to see the latest preview.",
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "label": "File"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Otf file\" && doc.is_url==1;",
+   "description": "Save the font to see the latest preview.",
+   "fieldname": "file_link",
+   "fieldtype": "Data",
+   "label": "URL"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Css\";",
+   "fieldname": "css",
+   "fieldtype": "Long Text",
+   "label": "Css"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Google Fonts\";",
+   "description": "Save the font to see the latest preview.",
+   "fieldname": "googlelinks",
+   "fieldtype": "Text",
+   "label": "Google links"
+  },
+  {
+   "default": "English",
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Language",
+   "options": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629\nEnglish"
+  },
+  {
+   "fieldname": "preview_section",
+   "fieldtype": "Section Break",
+   "label": "Preview"
+  },
+  {
+   "default": "A journey of a thousand miles begins with a single step.",
+   "fieldname": "preview_text",
+   "fieldtype": "Data",
+   "label": "Preview Text"
+  },
+  {
+   "fieldname": "demo",
+   "fieldtype": "HTML",
+   "label": "demo",
+   "options": "<div id=\"prv\"></div>"
+  },
+  {
+   "fieldname": "font_size",
+   "fieldtype": "HTML",
+   "options": "<table style=\"border: none;\">\n<tbody><tr><td>\n<div class=\"range-slider\">\n    <input id=\"input-range\" max=\"120\" min=\"1\" step=\"1\" style=\"width: 200px;\" type=\"range\" value=\"100\">\n</div> \n</td>\n<td>\n<div id=\"size\">40px</div>\n</td></tr></tbody></table>\n"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type==\"Otf file\"",
+   "fieldname": "is_url",
+   "fieldtype": "Check",
+   "label": "Is url"
+  },
+  {
+   "fieldname": "symbols",
+   "fieldtype": "HTML",
+   "label": "Symbols",
+   "options": "<style>\n    \n    \n    .col-sm{\n        \n        width:auto;\nfont-size:22px;\n    }\n</style><div class=\"container symbols\" id=\"english\">\n  <div class=\"row\">\n    <div class=\"col-sm\">A</div><div class=\"col-sm\">B</div><div class=\"col-sm\">C</div><div class=\"col-sm\">D</div><div class=\"col-sm\">E</div><div class=\"col-sm\">F</div><div class=\"col-sm\">G</div><div class=\"col-sm\">H</div><div class=\"col-sm\">I</div><div class=\"col-sm\">J</div><div class=\"col-sm\">K</div><div class=\"col-sm\">L</div><div class=\"col-sm\">M</div><div class=\"col-sm\">N</div><div class=\"col-sm\">O</div><div class=\"col-sm\">P</div><div class=\"col-sm\">Q</div><div class=\"col-sm\">R</div><div class=\"col-sm\">S</div><div class=\"col-sm\">T</div><div class=\"col-sm\">U</div><div class=\"col-sm\">V</div><div class=\"col-sm\">W</div><div class=\"col-sm\">X</div><div class=\"col-sm\">Y</div><div class=\"col-sm\">Z</div><div class=\"col-sm\">a</div><div class=\"col-sm\">b</div><div class=\"col-sm\">c</div><div class=\"col-sm\">d</div><div class=\"col-sm\">e</div><div class=\"col-sm\">f</div><div class=\"col-sm\">g</div><div class=\"col-sm\">h</div><div class=\"col-sm\">i</div><div class=\"col-sm\">j</div><div class=\"col-sm\">k</div><div class=\"col-sm\">l</div><div class=\"col-sm\">m</div><div class=\"col-sm\">n</div><div class=\"col-sm\">o</div><div class=\"col-sm\">p</div><div class=\"col-sm\">q</div><div class=\"col-sm\">r</div><div class=\"col-sm\">s</div><div class=\"col-sm\">t</div><div class=\"col-sm\">u</div><div class=\"col-sm\">v</div><div class=\"col-sm\">w</div><div class=\"col-sm\">x</div><div class=\"col-sm\">y</div><div class=\"col-sm\">z</div><div class=\"col-sm\">0</div><div class=\"col-sm\">1</div><div class=\"col-sm\">2</div><div class=\"col-sm\">3</div><div class=\"col-sm\">4</div><div class=\"col-sm\">5</div><div class=\"col-sm\">6</div><div class=\"col-sm\">7</div><div class=\"col-sm\">8</div><div class=\"col-sm\">9</div><div class=\"col-sm\">.</div><div class=\"col-sm\">,</div><div class=\"col-sm\">!</div><div class=\"col-sm\">?</div><div class=\"col-sm\">-</div><div class=\"col-sm\">_</div><div class=\"col-sm\">(</div><div class=\"col-sm\">)</div><div class=\"col-sm\">[</div><div class=\"col-sm\">]</div><div class=\"col-sm\">%</div><div class=\"col-sm\">#</div><div class=\"col-sm\">@</div>\n   \n    \n  </div>\n</div>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-04 10:17:59.924357",
+ "modified_by": "Administrator",
+ "module": "Slnee",
+ "name": "Font",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

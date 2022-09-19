@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "creation": "2022-08-10 10:43:16.334905",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_3",
+  "url",
+  "test",
+  "column_break_6",
+  "key",
+  "secret",
+  "shopping_cart_section",
+  "company",
+  "default_warehouse",
+  "price_list",
+  "sales_taxes_and_charges_template",
+  "column_break_12",
+  "customer_group",
+  "territory",
+  "quotation_series",
+  "submit_quotations",
+  "section_break_9",
+  "sync",
+  "opening_data_section",
+  "get_categories",
+  "get_products",
+  "get_customers",
+  "get_orders",
+  "tax_per",
+  "taxes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Button",
+   "label": "Test"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "key",
+   "fieldtype": "Data",
+   "label": "API consumer key"
+  },
+  {
+   "fieldname": "secret",
+   "fieldtype": "Data",
+   "label": "API consumer secret"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Sync"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "Woocommerce Server URL"
+  },
+  {
+   "fieldname": "get_categories",
+   "fieldtype": "Button",
+   "label": "Get Categories from store"
+  },
+  {
+   "fieldname": "get_products",
+   "fieldtype": "Button",
+   "label": "Get Produtcs from Store"
+  },
+  {
+   "fieldname": "get_orders",
+   "fieldtype": "Button",
+   "label": "Get Orders from Store"
+  },
+  {
+   "fieldname": "shopping_cart_section",
+   "fieldtype": "Section Break",
+   "label": "Shopping cart"
+  },
+  {
+   "fieldname": "default_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Default Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Default Customer Group",
+   "options": "Customer Group",
+   "reqd": 1
+  },
+  {
+   "default": "WP-QN-.#",
+   "fieldname": "quotation_series",
+   "fieldtype": "Select",
+   "label": "Quotation Series",
+   "options": "QN-.#\nWP-QN-.#",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "opening_data_section",
+   "fieldtype": "Section Break",
+   "label": "Opening data"
+  },
+  {
+   "fieldname": "sales_taxes_and_charges_template",
+   "fieldtype": "Link",
+   "label": "Sales Taxes and Charges Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "default": "0",
+   "fieldname": "sync",
+   "fieldtype": "Check",
+   "label": "Enable Sync"
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_per",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "tax_per"
+  },
+  {
+   "fieldname": "get_customers",
+   "fieldtype": "Button",
+   "label": "Get Customers from Store"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Default Customer Territory",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "submit_quotations",
+   "fieldtype": "Check",
+   "label": "submit Quotations"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "taxes",
+   "options": "Sales Taxes and Charges"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-09-08 17:43:41.214913",
+ "modified_by": "Administrator",
+ "module": "Slnee",
+ "name": "Wordpress Store",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

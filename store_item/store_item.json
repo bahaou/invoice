@@ -1,0 +1,320 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2022-08-10 12:29:03.757409",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "name1",
+  "warehouse",
+  "column_break_3",
+  "type",
+  "status",
+  "s",
+  "items",
+  "section_break_6",
+  "tax",
+  "regular_price",
+  "column_break_8",
+  "on_sale",
+  "sale_price",
+  "section_break_11",
+  "manage_stock",
+  "stock_quantity",
+  "column_break_14",
+  "html_15",
+  "backorders",
+  "section_break_14",
+  "weight",
+  "length",
+  "column_break_17",
+  "height",
+  "width",
+  "section_break_66",
+  "description",
+  "short_description",
+  "section_break_17",
+  "images_section",
+  "image_1",
+  "image_4",
+  "column_break_34",
+  "image_2",
+  "image_5",
+  "column_break_37",
+  "image_3",
+  "image_6",
+  "section_break_37",
+  "related_ids",
+  "update_store",
+  "permalink",
+  "tax_per"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Id",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "simple",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "simple\ngrouped\nexternal\nvariable"
+  },
+  {
+   "default": "draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "draft\npending\nprivate\npublish"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "short_description",
+   "fieldtype": "Data",
+   "label": "Short Description"
+  },
+  {
+   "fieldname": "regular_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Regular Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "on_sale",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "On Sale"
+  },
+  {
+   "depends_on": "eval:doc.on_sale==1;",
+   "fieldname": "sale_price",
+   "fieldtype": "Currency",
+   "label": "Sale Price"
+  },
+  {
+   "fieldname": "section_break_66",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "manage_stock",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Manage Stock"
+  },
+  {
+   "depends_on": "eval:doc.manage_stock==1;",
+   "fieldname": "stock_quantity",
+   "fieldtype": "Int",
+   "label": "Stock Quantity"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "related_ids",
+   "fieldtype": "Table",
+   "label": "Related Products",
+   "options": "Store Item Item"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "label": "Length"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "label": "Width"
+  },
+  {
+   "fieldname": "permalink",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "product url"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.manage_stock==1;",
+   "fieldname": "html_15",
+   "fieldtype": "HTML",
+   "options": "<div style=\"height: 38px;\"></div>"
+  },
+  {
+   "default": "Yes, but with customer notification",
+   "depends_on": "eval:doc.manage_stock==1;",
+   "fieldname": "backorders",
+   "fieldtype": "Select",
+   "label": "Allow backorders?",
+   "options": "No\nYes, but with customer notification\nYes"
+  },
+  {
+   "default": "1",
+   "fieldname": "update_store",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "update_store"
+  },
+  {
+   "fieldname": "images_section",
+   "fieldtype": "Section Break",
+   "label": "Images"
+  },
+  {
+   "fieldname": "image_1",
+   "fieldtype": "Attach Image",
+   "label": "Image 1"
+  },
+  {
+   "fieldname": "image_4",
+   "fieldtype": "Attach Image",
+   "label": "Image 4"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image_2",
+   "fieldtype": "Attach Image",
+   "label": "Image 2"
+  },
+  {
+   "fieldname": "image_5",
+   "fieldtype": "Attach Image",
+   "label": "Image 5"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image_3",
+   "fieldtype": "Attach Image",
+   "label": "Image 3"
+  },
+  {
+   "fieldname": "image_6",
+   "fieldtype": "Attach Image",
+   "label": "Image 6"
+  },
+  {
+   "fieldname": "section_break_37",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Store Item List"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "default": "0",
+   "fieldname": "tax",
+   "fieldtype": "Currency",
+   "label": "Total Tax",
+   "options": "Sales Taxes and Charges",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_per",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "tax per"
+  }
+ ],
+ "image_field": "image_1",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-26 11:28:52.141780",
+ "modified_by": "Administrator",
+ "module": "Slnee",
+ "name": "Store Item",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
